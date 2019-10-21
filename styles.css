@@ -1,0 +1,31 @@
+* {
+  border: 1px solid red;
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Open Sans';
+}
+
+body {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas:
+  "aside main main"
+  "aside section section";
+}
+
+img {
+  width: 30px;
+}
+
+aside {
+  grid-area: aside;
+}
+
+main {
+  grid-area: main;
+}
+
+section {
+  grid-area: section;
+}
