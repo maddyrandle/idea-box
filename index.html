@@ -6,8 +6,37 @@
     <title></title>
   </head>
   <body>
-
-
+    <aside>
+      <h1 class="idea-box-heading">IdeaBox</h1>
+      <div class="starred-container">
+        <h3 class="filter-heading">Filter Starred Ideas</h3>
+        <button class="show-starred-ideas-btn" type="button">Show Starred Ideas</button>
+      </div>
+    </aside>
+    <main>
+      <form class="idea-form">
+        <label class="title-label" for="title">Title</label>
+        <input type="text" value="title"></input>
+        <label class="body-label" for="body"></label>
+        <textarea name="name" rows="8" cols="80"></textarea>
+        <button class="save-btn" type="button" name="button"></button>
+        <div class="">
+          <button class="search-btn" type="button" name="button"></button>
+          <input class="search-input" type="text">
+        </div>
+      </form>
+      <section class="empty-section-container">
+        <div class="card-container">
+          <header>
+            <img src="./star.svg" alt="star favorite button">
+            <img src="./delete.svg" alt="delete button">
+          </header>
+          <h2>Idea Title</h2>
+          <p>Idea body. Don't ever play yourself. Every chance I get I water the plants! Lion! cloth talk.</p>
+          <footer><img src="./comment.svg" alt="comment button"></footer>
+        </div>
+      </section>
+    </main>
     <script src="./main.js"></script>
   </body>
 </html>
