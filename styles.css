@@ -266,7 +266,7 @@ section {
 
   .idea-box-heading {
     padding: 2%;
-    font-size: 225%;
+    font-size: 150%;
     width: 96%;
     justify-content: center;
     display: flex;
@@ -275,5 +275,32 @@ section {
 
   .card-container {
     width: 90%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .idea-form {
+    padding: 6% 5%;
+    padding-bottom: 1%;
+  }
+
+  .idea-box-heading {
+    padding: 2%;
+    font-size: 150%;
+    width: 90%;
+    justify-content: center;
+    display: flex;
+    padding-right: 5%;
+  }
+
+  .card-container {
+    width: 90%;
+    margin-top: 6%;
   }
 }
