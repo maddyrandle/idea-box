@@ -20,24 +20,32 @@ img {
 
 aside {
   background: #1F1F3D; /* M ADDED */
-  display: flex; /* M ADDED */
+  /* display: flex; */
+  font-stretch: semi-expanded;
   grid-area: aside;
 }
 /* M ADDED */
 .idea-box-heading {
   border-bottom: 1px solid #353567;
   color: #E9E9F3;
+  font-size: 18px;
+  font-weight: 600;
 }
 /* M ADDED */
-.starred-container {
+.starred-container h3 {
   border-bottom: 1px solid #353567;
   color: #BFBFDD;
+  font-size: 12px;
+  font-weight: 600;
+
 }
 /* M ADDED */
 .show-starred-ideas-btn {
   background: #5356A4;
   border: 1px solid #353567;
   color: #E9E9F3;
+  font-weight: 600;
+  padding: 2% 5%;
 }
 
 main {
