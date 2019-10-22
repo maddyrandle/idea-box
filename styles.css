@@ -1,5 +1,5 @@
 * {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   margin: 0px;
   padding: 0px;
   font-family: 'Open Sans';
@@ -19,7 +19,25 @@ img {
 }
 
 aside {
+  background: #1F1F3D; /* M ADDED */
+  display: flex; /* M ADDED */
   grid-area: aside;
+}
+/* M ADDED */
+.idea-box-heading {
+  border-bottom: 1px solid #353567;
+  color: #E9E9F3;
+}
+/* M ADDED */
+.starred-container {
+  border-bottom: 1px solid #353567;
+  color: #BFBFDD;
+}
+/* M ADDED */
+.show-starred-ideas-btn {
+  background: #5356A4;
+  border: 1px solid #353567;
+  color: #E9E9F3;
 }
 
 main {
