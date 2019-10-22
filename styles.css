@@ -20,31 +20,39 @@ img {
 
 aside {
   background: #1F1F3D; /* M ADDED */
-  /* display: flex; */
-  font-stretch: semi-expanded;
+  font-stretch: semi-expanded; /* M ADDED */
   grid-area: aside;
 }
 /* M ADDED */
 .idea-box-heading {
   border-bottom: 1px solid #353567;
   color: #E9E9F3;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
+  padding: 6% 4%;
 }
 /* M ADDED */
-.starred-container h3 {
+.starred-container {
   border-bottom: 1px solid #353567;
+  display: flex;
+  flex-direction: column;
+}
+/* M ADDED */
+h3 {
   color: #BFBFDD;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
-
+  padding: 6% 4%;
 }
 /* M ADDED */
 .show-starred-ideas-btn {
+  align-self: stretch;
   background: #5356A4;
   border: 1px solid #353567;
   color: #E9E9F3;
+  font-size: 20px;
   font-weight: 600;
+  margin: 2% 4% 8% 4%;
   padding: 2% 5%;
 }
 
