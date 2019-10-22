@@ -33,25 +33,25 @@ main {
   display: flex;
   flex-direction: column;
   font-weight: 800;
-  font-size: 0.9rem;
+  font-size: 1.5rem;
   padding: 3% 25%;
 }
 
 .idea-form label {
-  padding-bottom: 2%;
+  padding: 0% 0% 1.5% 0.3%;
 }
 
 .idea-input {
-  border: 2px solid #5356A4;
-  border-radius: 3px;
+  border: 3px solid #5356A4;
+  border-radius: 4px;
   color: #1F1F3D;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   margin-bottom: 8%;
   padding: 2% 2%;
 }
 
 .title-input {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 800;
 }
 
@@ -61,14 +61,14 @@ main {
 
 .save-btn {
   background-color: #353567;
-  border: 2px solid #5356A4;
-  border-radius: 3px;
+  border: 3px solid #5356A4;
+  border-radius: 4px;
   color: #FFFFFF;
   cursor: pointer;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   font-weight: 800;
   margin-bottom: 8%;
-  padding: 2% 0%;
+  padding: 2.5% 0%;
 }
 
 #search {
@@ -84,17 +84,18 @@ main {
   width: 19%;
   cursor: pointer;
   text-align: center;
-  border: 2px solid #5356A4;
-  border-radius: 3px;
+  border: 3px solid #5356A4;
+  border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-right: none;
   margin-right: -0.5%;
+  outline: none;
 }
 
 .search-btn img {
-  width: 55%;
+  width: 50%;
 }
 
 .search-input {
@@ -103,9 +104,10 @@ main {
   border-bottom-left-radius: 0;
   height: 100%;
   margin: 0;
-  font-size: 1rem;
-  padding: 3%;
+  font-size: 1.5rem;
+  padding: 3.05%;
   width: 100%;
+  outline: none;
 }
 
 .search-input::placeholder {
