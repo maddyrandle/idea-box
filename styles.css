@@ -20,7 +20,7 @@ img {
 
 aside {
   background: #1F1F3D; /* M ADDED */
-  font-stretch: semi-expanded; /* M ADDED */
+  font-stretch: expanded; /* M ADDED */
   grid-area: aside;
 }
 /* M ADDED */
@@ -29,7 +29,7 @@ aside {
   color: #E9E9F3;
   font-size: 20px;
   font-weight: 600;
-  padding: 6% 4%;
+  padding: 6% 5%;
 }
 /* M ADDED */
 .starred-container {
@@ -42,17 +42,17 @@ h3 {
   color: #BFBFDD;
   font-size: 14px;
   font-weight: 600;
-  padding: 6% 4%;
+  padding: 6% 5%;
 }
 /* M ADDED */
 .show-starred-ideas-btn {
   align-self: stretch;
   background: #5356A4;
-  border: 1px solid #353567;
+  border: 2px solid #353567;
   color: #E9E9F3;
   font-size: 20px;
   font-weight: 600;
-  margin: 2% 4% 8% 4%;
+  margin: 2% 5% 8% 5%;
   padding: 2% 5%;
 }
 
