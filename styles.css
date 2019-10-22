@@ -78,13 +78,13 @@ main {
   border: 3px solid #5356A4;
   border-radius: 4px;
   color: #1F1F3D;
-  font-size: 1.5rem;
+  font-size: 28px;
   margin-bottom: 8%;
   padding: 1% 2%;
 }
 
 .title-input {
-  font-size: 1.5rem;
+  font-size: 28px;
   font-weight: 800;
 }
 
@@ -114,7 +114,7 @@ main {
 
 .search-btn {
   background: #353567 no-repeat;
-  width: 19%;
+  width: 15%;
   cursor: pointer;
   text-align: center;
   border: 3px solid #5356A4;
@@ -125,10 +125,11 @@ main {
   border-right: none;
   margin-right: -0.5%;
   outline: none;
+  padding-right: 1%;
 }
 
 .search-btn img {
-  width: 50%;
+  width: 55%;
 }
 
 .search-input {
@@ -137,8 +138,8 @@ main {
   border-bottom-left-radius: 0;
   height: 100%;
   margin: 0;
-  font-size: 1.5rem;
-  padding: 3.05%;
+  font-size: 20px;
+  padding: 2.93%;
   width: 100%;
   outline: none;
 }
