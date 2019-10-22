@@ -149,4 +149,46 @@ main {
 
 section {
   grid-area: section;
+  background-color: #EAEAF4;
+  height: 102%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.card-container {
+  width: 29%;
+  height: 270px;
+  background-color: #FFFFFF;
+  margin: 2%;
+}
+
+.card-header {
+  background-color: #1F1F3D;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-footer {
+  background-color: #5356A4;
+  display: flex;
+  align-items: center;
+}
+
+.idea-title-heading {
+  padding: 5%;
+}
+
+.card-idea-paragraph {
+  height: 55%;
+  padding: 0% 5%;
+  font-size: 25px;
+}
+
+.card-comment {
+  display: inline-block;
+  color: #FFFFFF;
+  font-size: 20px;
+  text-align: center;
+  margin-left: 2%;
 }
