@@ -50,7 +50,7 @@ h3 {
   background: #5356A4;
   border: 2px solid #353567;
   color: #E9E9F3;
-  font-size: 27px;
+  font-size: 120%;
   font-weight: 600;
   margin: 2% 5% 8% 5%;
   padding: 2% 5%;
@@ -159,7 +159,7 @@ section {
 
 .card-container {
   width: 29%;
-  height: 290px;
+  height: auto;
   background-color: #FFFFFF;
   margin: 2%;
   border: 1px solid #6E646B;
@@ -190,9 +190,10 @@ section {
 }
 
 .card-idea-paragraph {
-  height: 55%;
+  height: auto;
   padding: 0% 5%;
-  font-size: 25px;
+  padding-bottom: 5%;
+  font-size: 23px;
   color: #1F1F3D;
 }
 
@@ -203,4 +204,103 @@ section {
   text-align: center;
   font-weight: 600;
   margin-left: 2%;
+}
+
+
+@media screen and (max-width: 822px) {
+  body {
+    display: inline-block;
+    width: 100%;
+  }
+
+  .card-idea-paragraph {
+    font-size: 21px;
+  }
+  .idea-form {
+    padding: 3% 15%;
+  }
+  .starred-container {
+    width: 100%;
+
+  }
+  .show-starred-ideas-btn {
+    font-size: 95%;
+    width: 30%;
+    margin: auto;
+    margin-bottom: 5%;
+    padding: 1%;
+  }
+
+  .idea-box-heading {
+    padding: 2%;
+    font-size: 225%;
+    width: 96%;
+    justify-content: center;
+    display: flex;
+    padding-right: 5%;
+  }
+
+  aside {
+    height: 210px;
+    width: 100%;
+  }
+
+
+  h3 {
+    padding: 2%;
+    justify-content: center;
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .idea-form {
+    padding: 6% 5%;
+  }
+
+  .idea-box-heading {
+    padding: 2%;
+    font-size: 150%;
+    width: 96%;
+    justify-content: center;
+    display: flex;
+    padding-right: 5%;
+  }
+
+  .card-container {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .idea-form {
+    padding: 6% 5%;
+    padding-bottom: 1%;
+  }
+
+  .idea-box-heading {
+    padding: 2%;
+    font-size: 150%;
+    width: 90%;
+    justify-content: center;
+    display: flex;
+    padding-right: 5%;
+  }
+
+  .card-container {
+    width: 90%;
+    margin-top: 6%;
+  }
 }
