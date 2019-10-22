@@ -14,7 +14,7 @@ body {
 }
 
 img {
-  width: 30px;
+  width: 35px;
 }
 
 aside {
@@ -96,7 +96,7 @@ main {
   background-color: #353567;
   border: 3px solid #5356A4;
   border-radius: 4px;
-  color: #FFFFFF;
+  color: #E9E9F3;
   cursor: pointer;
   font-size: 27px;
   font-weight: 800;
@@ -159,26 +159,34 @@ section {
 
 .card-container {
   width: 29%;
-  height: 270px;
+  height: 290px;
   background-color: #FFFFFF;
   margin: 2%;
   border: 1px solid #6E646B;
+  margin-bottom: 4%;
+  margin-top: 2.5%;
 }
 
 .card-header {
   background-color: #1F1F3D;
   display: flex;
   justify-content: space-between;
+  padding: 2% 1.5%;
 }
 
 .card-footer {
   background-color: #5356A4;
   display: flex;
   align-items: center;
+  border: 1px solid #6E646B;
+  padding: 1.5% 1%;
+  margin: 0% -1px;
 }
 
 .idea-title-heading {
-  padding: 5%;
+  padding: 7% 6% 3% 6%;
+  font-size: 25px;
+  font-weight: 700;
 }
 
 .card-idea-paragraph {
@@ -190,8 +198,9 @@ section {
 
 .card-comment {
   display: inline-block;
-  color: #FFFFFF;
-  font-size: 20px;
+  color: #E9E9F3;
+  font-size: 18px;
   text-align: center;
+  font-weight: 600;
   margin-left: 2%;
 }
