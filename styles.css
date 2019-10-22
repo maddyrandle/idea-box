@@ -159,7 +159,7 @@ section {
 
 .card-container {
   width: 29%;
-  height: 290px;
+  height: 300px;
   background-color: #FFFFFF;
   margin: 2%;
   border: 1px solid #6E646B;
@@ -192,7 +192,7 @@ section {
 .card-idea-paragraph {
   height: 55%;
   padding: 0% 5%;
-  font-size: 25px;
+  font-size: 23px;
   color: #1F1F3D;
 }
 
@@ -203,4 +203,72 @@ section {
   text-align: center;
   font-weight: 600;
   margin-left: 2%;
+}
+
+@media screen and (max-width: 949px) {
+  .card-idea-paragraph {
+    font-size: 21px;
+  }
+  .idea-form {
+    padding: 3% 15%;
+  }
+  .show-starred-ideas-btn {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 822px) {
+  body {
+    display: inline-block;
+    width: 51.375em;
+  }
+
+  .card-idea-paragraph {
+    font-size: 21px;
+  }
+  .idea-form {
+    padding: 3% 15%;
+  }
+  .starred-container {
+    width: 100%;
+
+  }
+  .show-starred-ideas-btn {
+    font-size: 1em;
+    width: 30%;
+    margin: auto;
+    margin-bottom: 5%;
+  }
+
+.idea-box-heading {
+  padding: 2%;
+  font-size: 225%;
+  width: 96%;
+  justify-content: center;
+  display: flex;
+  padding-right: 5%;
+}
+  .card-container {
+
+  }
+
+  aside {
+    height: 246px;
+    width: 100%;
+  }
+
+
+  h3 {
+    padding: 2%;
+    justify-content: center;
+    display: flex;
+  }
+
+
+
+    /* main {
+      height: 60%;
+    } */
+  }
+
 }
