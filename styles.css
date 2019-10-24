@@ -5,6 +5,7 @@
 }
 
 body {
+  background-color: #1F1F3D;
   display: grid;
   height: 100vh;
   grid-template-columns: 1fr 3fr;
