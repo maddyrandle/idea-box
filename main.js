@@ -4,17 +4,10 @@ var titleInput = document.querySelector(".title-input");
 var ideaInput = document.querySelector(".body-textarea");
 var saveButton =  document.querySelector(".save-btn");
 
-formParent.addEventListener("click", x);
-
-disableSaveButton()
-function x(event) {
-  disableSaveButton()
-  createCard(event)
-}
+formParent.addEventListener("click", createCard);
 
 function createCard(event) {
-
-  if (event.target.className === "save-btn") {
+  if (event.target.className === "save-btn" && titleInput.value && ideaInput.value) {
     var cardHtml = `
     <div class="card-container">
       <header class="card-header">
@@ -31,15 +24,5 @@ function createCard(event) {
     `;
     cardContainerParent.insertAdjacentHTML("afterbegin", cardHtml);
     formParent.reset();
-  }
-}
-
-
-
-function disableSaveButton() {
-  if (titleInput.value === "" && ideaInput.value === "") {
-    saveButton.disabled = true;
-  } else {
-    saveButton.disabled = false;
   }
 }
