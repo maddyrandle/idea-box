@@ -1,23 +1,28 @@
 var formParent = document.querySelector(".idea-form");
 var cardContainerParent = document.querySelector(".empty-section-container");
+var titleInput = document.querySelector(".title-input");
+var ideaInput = document.querySelector(".body-textarea");
+var saveButton =  document.querySelector(".save-btn");
 
-formParent.addEventListener("click", createCard);
+formParent.addEventListener("click", x);
 
-
+disableSaveButton()
+function x(event) {
+  disableSaveButton()
+  createCard(event)
+}
 
 function createCard(event) {
-  console.log(event)
 
   if (event.target.className === "save-btn") {
-    // var titleInput = event.target.classList.contains("title-input").value
     var cardHtml = `
     <div class="card-container">
       <header class="card-header">
         <img src="./images/star.svg" alt="star favorite button">
         <img src="./images/delete.svg" alt="delete button">
       </header>
-      <h2 class="idea-title-heading">${getTitleInput()}</h2>
-      <p class="card-idea-paragraph">${getIdeaInput()}</p>
+      <h2 class="idea-title-heading">${titleInput.value}</h2>
+      <p class="card-idea-paragraph">${ideaInput.value}</p>
       <footer class="card-footer">
         <img src="./images/comment.svg" alt="comment button">
         <p class="card-comment">Comment</p>
@@ -25,15 +30,16 @@ function createCard(event) {
     </div>
     `;
     cardContainerParent.insertAdjacentHTML("afterbegin", cardHtml);
+    formParent.reset();
   }
 }
 
-function getTitleInput() {
-  var titleInput = document.querySelector(".title-input");
-  return titleInput.value;
-}
 
-function getIdeaInput() {
-  var ideaInput = document.querySelector(".body-textarea");
-  return ideaInput.value;
+
+function disableSaveButton() {
+  if (titleInput.value === "" && ideaInput.value === "") {
+    saveButton.disabled = true;
+  } else {
+    saveButton.disabled = false;
+  }
 }
