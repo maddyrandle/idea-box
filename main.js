@@ -51,7 +51,8 @@ function instantiateIdea(title, body, star) {
 }
 
 function findIndexOfIdea(event) {
-  var ideaId = parseInt(event.target.classList.contains("card-container").id);
+  var ideaId = parseInt(event.target.closest(".card-container").id);
+  console.log(ideaId.id)
     for (var i = 0; i < ideaArray.length; i++) {
       if (ideaArray[i].id === ideaId) {
         return ideaArray[i];
