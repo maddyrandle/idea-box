@@ -175,6 +175,14 @@ section {
   padding: 2% 1.5%;
 }
 
+.star-fav-btn {
+  cursor: pointer;
+}
+
+.delete-card-btn {
+  cursor: pointer;
+}
+
 .card-footer {
   background-color: #5356A4;
   display: flex;
