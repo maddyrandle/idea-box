@@ -5,14 +5,14 @@ var ideaInput = document.querySelector(".body-textarea");
 var saveButton =  document.querySelector(".save-btn");
 
 formParent.addEventListener("click", createCard);
-cardContainerParent.addEventListener("click", deleteCard);
+cardContainerParent.addEventListener("click", cardActions);
 
 function createCard(event) {
     if (event.target.className === "save-btn" && titleInput.value && ideaInput.value) {
       var cardHtml = `
       <div class="card-container">
         <header class="card-header">
-          <img class="star-card-fav-btn" src="./images/star.svg" alt="star favorite button">
+          <img class="star-fav-btn" src="./images/star.svg" alt="star favorite button">
           <img class="delete-card-btn" src="./images/delete.svg" alt="delete button">
         </header>
         <h2 class="idea-title-heading">${titleInput.value}</h2>
@@ -28,6 +28,14 @@ function createCard(event) {
     }
 }
 
+function cardActions(event) {
+  if (event.target.className === "delete-card-btn") {
+    deleteCard(event);
+  } else if (event.target.src.includes("star")) {
+    toggleFavStar(event);
+  }
+}
+
 function deleteCard(event) {
   if (event.target.className === "delete-card-btn") {
     var cardHeader = event.target.parentElement;
@@ -35,6 +43,10 @@ function deleteCard(event) {
   }
 }
 
-// function toggleStar(event) {
-//   console.log(event.target);
-// }
+function toggleFavStar(event) {
+  if (event.target.src.includes("/images/star.svg")) {
+    event.target.src = "./images/star-active.svg";
+  } else {
+    event.target.src = "./images/star.svg";
+  }
+}
