@@ -11,6 +11,7 @@ saveButton.addEventListener
 // onLoad = saveButton.classList.add("");
 
 function onCardParentClick() {
+  deleteCard(event)
   if (event.target.classList.contains("star-icon")) {
      styleStarIcon(event);
   }
@@ -76,4 +77,15 @@ function checkStar(newIdea){
   } else {
     return "./images/star.svg"
   }
+}
+
+// function deleteCard(event) {
+//   if (event.target.className === "delete-card-btn") {
+//     var cardHeader = event.target.parentNode;
+//     cardHeader.parentNode.remove();
+//   }
+// }
+
+function deleteCard(event) {
+   event.target.closest(".card-container").remove();
 }
