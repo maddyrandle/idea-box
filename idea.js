@@ -1,9 +1,9 @@
 class Idea {
-  constructor(title, body) {
+  constructor(title, body, star) {
     this.id = Date.now();
     this.title = title;
     this.body = body;
-    this.start = false;
+    this.star = false;
   }
 
   saveToStorage() {
@@ -16,5 +16,9 @@ class Idea {
 
   updateIdea() {
 
+  }
+
+  toggleStar() {
+    this.star = !this.star;
   }
 }

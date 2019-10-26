@@ -3,9 +3,24 @@ var cardContainerParent = document.querySelector(".empty-section-container");
 var titleInput = document.querySelector(".title-input");
 var ideaInput = document.querySelector(".body-textarea");
 var saveButton =  document.querySelector(".save-btn");
+var ideaArray = [];
 
-formParent.addEventListener("click", createCard);
-cardContainerParent.addEventListener("click", cardActions);
+formParent.addEventListener("click", onFormParentClick);
+cardContainerParent.addEventListener("click", onCardParentClick);
+// onLoad = saveButton.classList.add(".style-save-btn");
+
+function onCardParentClick() {
+  deleteChoto(event)
+  if (event.target.classList.contains("star-icon")) {
+     styleStarIcon(event);
+  }
+}
+
+function onFormParentClick() {
+  if (event.target.className === "save-btn") {
+  instantiateIdea(titleInput.value, ideaInput.value, false);
+  }
+}
 
 function createCard(event) {
     if (event.target.className === "save-btn" && titleInput.value && ideaInput.value) {
@@ -28,25 +43,40 @@ function createCard(event) {
     }
 }
 
-function cardActions(event) {
-  if (event.target.className === "delete-card-btn") {
-    deleteCard(event);
-  } else if (event.target.src.includes("star")) {
-    toggleFavStar(event);
+function instantiateIdea(title, body, star) {
+  var idea = new Idea(title, body, star);
+  ideaArray.push(idea);
+  createCard(idea);
+}
+
+function findIndexOfIdea(event) {
+  var ideaId = parseInt(event.target.closest(".card-container").id);
+  console.log(ideaId.id)
+    for (var i = 0; i < ideaArray.length; i++) {
+      if (ideaArray[i].id === ideaId) {
+        return ideaArray[i];
+      }
+    }
+}
+
+function styleStarIcon(event) {
+  var hiddenObj = findIndexOfIdea(event);
+    hiddenObj.toggleStar();
+    if (hiddenObj.star) {
+      event.target.src = "./images/star-active.svg";
+    } else {
+      event.target.src = "./images/star.svg";
+      }
+}
+
+function checkStar(newIdea){
+  if(newIdea.favorite){
+    return "./images/star-active.svg"
+  } else {
+    return "./images/star.svg"
   }
 }
 
 function deleteCard(event) {
-  if (event.target.className === "delete-card-btn") {
-    var cardHeader = event.target.parentElement;
-    cardHeader.parentElement.remove();
-  }
-}
-
-function toggleFavStar(event) {
-  if (event.target.src.includes("/images/star.svg")) {
-    event.target.src = "./images/star-active.svg";
-  } else {
-    event.target.src = "./images/star.svg";
-  }
+   event.target.closest(".card-container").remove();
 }
