@@ -165,7 +165,7 @@ section {
 
 .card-container {
   width: 29%;
-  height: auto;
+  height: 100%;
   background-color: #FFFFFF;
   margin: 2%;
   border: 1px solid #6E646B;
