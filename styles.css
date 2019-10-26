@@ -209,6 +209,7 @@ section {
   padding-bottom: 5%;
   font-size: 23px;
   color: #1F1F3D;
+  overflow-wrap: break-word;
 }
 
 .card-comment {
