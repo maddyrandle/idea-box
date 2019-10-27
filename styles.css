@@ -1,18 +1,18 @@
 * {
+  font-family: 'Open Sans';
   margin: 0px;
   padding: 0px;
-  font-family: 'Open Sans';
 }
 
 body {
   background-color: #EAEAF4;
   display: grid;
-  height: 100vh;
   grid-gap: 2px;
   grid-template-columns: 1fr 3fr;
   grid-template-areas:
   "aside main main"
   "aside section section";
+  height: 100vh;
 }
 
 img {
@@ -66,8 +66,8 @@ main {
   color: #1F1F3D;
   display: flex;
   flex-direction: column;
-  font-weight: 700;
   font-size: 20px;
+  font-weight: 700;
   padding: 3% 25%;
 }
 
@@ -109,29 +109,28 @@ main {
   padding: 2% 0%;
 }
 
-
 #search {
-  width: 100%;
-  padding: 0%;
   display: flex;
   flex-direction: row;
   margin-bottom: 8%;
+  padding: 0%;
+  width: 100%;
 }
 
 .search-btn {
+  align-items: center;
   background: #353567 no-repeat;
-  width: 15%;
-  cursor: pointer;
-  text-align: center;
   border: 3px solid #5356A4;
   border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border-right: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
   margin-right: -0.5%;
   outline: none;
   padding-right: 1%;
+  text-align: center;
+  width: 15%;
 }
 
 .search-btn img {
@@ -139,15 +138,15 @@ main {
 }
 
 .search-input {
+  border-bottom-left-radius: 0;
   border-left: none;
   border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  font-size: 20px;
   height: 100%;
   margin: 0;
-  font-size: 20px;
+  outline: none;
   padding: 2.93%;
   width: 100%;
-  outline: none;
 }
 
 .search-input::placeholder {
@@ -155,22 +154,22 @@ main {
 }
 
 section {
-  grid-area: section;
   background-color: #EAEAF4;
-  height: 102%;
   display: flex;
   flex-wrap: wrap;
+  grid-area: section;
+  height: 102%;
   justify-content: flex-start;
 }
 
 .card-container {
-  width: 29%;
-  height: 100%;
   background-color: #FFFFFF;
-  margin: 2%;
   border: 1px solid #6E646B;
+  height: 100%;
+  margin: 2%;
   margin-bottom: 4%;
   margin-top: 2.5%;
+  width: 29%;
 }
 
 .card-header {
@@ -189,38 +188,37 @@ section {
 }
 
 .card-footer {
-  background-color: #5356A4;
-  display: flex;
   align-items: center;
+  background-color: #5356A4;
   border: 1px solid #6E646B;
-  padding: 1.5% 1%;
+  display: flex;
   margin: 0% -1px;
+  padding: 1.5% 1%;
 }
 
 .idea-title-heading {
-  padding: 7% 6% 3% 6%;
   font-size: 25px;
   font-weight: 700;
+  padding: 7% 6% 3% 6%;
 }
 
 .card-idea-paragraph {
+  color: #1F1F3D;
+  font-size: 23px;
   height: auto;
+  overflow-wrap: break-word;
   padding: 0% 5%;
   padding-bottom: 5%;
-  font-size: 23px;
-  color: #1F1F3D;
-  overflow-wrap: break-word;
 }
 
 .card-comment {
-  display: inline-block;
   color: #E9E9F3;
+  display: inline-block;
   font-size: 20px;
-  text-align: center;
   font-weight: 600;
   margin-left: 2%;
+  text-align: center;
 }
-
 
 @media screen and (max-width: 822px) {
   body {
@@ -231,28 +229,30 @@ section {
   .card-idea-paragraph {
     font-size: 21px;
   }
+
   .idea-form {
     padding: 3% 15%;
   }
+
   .starred-container {
     width: 100%;
-
   }
+
   .show-starred-ideas-btn {
     font-size: 95%;
-    width: 30%;
     margin: auto;
     margin-bottom: 5%;
     padding: 1%;
+    width: 30%;
   }
 
   .idea-box-heading {
-    padding: 2%;
-    font-size: 225%;
-    width: 96%;
-    justify-content: center;
     display: flex;
+    font-size: 225%;
+    justify-content: center;
+    padding: 2%;
     padding-right: 5%;
+    width: 96%;
   }
 
   aside {
@@ -260,18 +260,17 @@ section {
     width: 100%;
   }
 
-
   h3 {
-    padding: 2%;
-    justify-content: center;
     display: flex;
+    justify-content: center;
+    padding: 2%;
   }
 }
 
 @media screen and (max-width: 500px) {
   section {
-    display: flex;
     align-items: center;
+    display: flex;
     flex-direction: column;
   }
 
@@ -280,12 +279,12 @@ section {
   }
 
   .idea-box-heading {
-    padding: 2%;
-    font-size: 150%;
-    width: 96%;
-    justify-content: center;
     display: flex;
+    font-size: 150%;
+    justify-content: center;
+    padding: 2%;
     padding-right: 5%;
+    width: 96%;
   }
 
   .card-container {
@@ -295,8 +294,8 @@ section {
 
 @media screen and (max-width: 375px) {
   section {
-    display: flex;
     align-items: center;
+    display: flex;
     flex-direction: column;
   }
 
@@ -306,16 +305,16 @@ section {
   }
 
   .idea-box-heading {
-    padding: 2%;
-    font-size: 150%;
-    width: 90%;
-    justify-content: center;
     display: flex;
+    font-size: 150%;
+    justify-content: center;
+    padding: 2%;
     padding-right: 5%;
+    width: 90%;
   }
 
   .card-container {
-    width: 90%;
     margin-top: 6%;
+    width: 90%;
   }
 }
