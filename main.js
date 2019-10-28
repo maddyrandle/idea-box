@@ -20,6 +20,12 @@ function onFormParentClick() {
   }
 }
 
+// function parseLocalStorage() {
+//   var getItem = localStorage.getItem("ideaCard");
+//   var storageArray = JSON.parse(getItem);
+//   return storageArray;
+// }
+
 function createCard(newIdea) {
   // how does it refrence new idea
   // medusa
@@ -47,6 +53,7 @@ function instantiateIdea(title, body, star) {
   var idea = new Idea(title, body, star);
   ideaArray.push(idea);
   createCard(idea);
+  idea.saveToStorage(ideaArray);
 }
 
 function findIndexOfIdea(event) {
