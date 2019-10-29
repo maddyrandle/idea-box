@@ -41,9 +41,6 @@ function checkLocalStorage() {
 }
 
 function createCard(newIdea) {
-  // how does it refrence new idea
-  // medusa
-  // if (event.target.className === "save-btn" && titleInput.value && ideaInput.value) {
     var cardHtml = `
     <div id="${newIdea.id}" class="card-container">
       <header class="card-header">
@@ -60,7 +57,6 @@ function createCard(newIdea) {
      `;
       cardContainerParent.insertAdjacentHTML("afterbegin", cardHtml);
       formParent.reset();
-  // }
 }
 
 function instantiateIdea(title, body, star) {
