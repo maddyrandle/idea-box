@@ -41,9 +41,6 @@ function checkLocalStorage() {
 }
 
 function createCard(newIdea) {
-  // how does it refrence new idea
-  // medusa
-  // if (event.target.className === "save-btn" && titleInput.value && ideaInput.value) {
     var cardHtml = `
     <div id="${newIdea.id}" class="card-container">
       <header class="card-header">
@@ -60,7 +57,6 @@ function createCard(newIdea) {
      `;
       cardContainerParent.insertAdjacentHTML("afterbegin", cardHtml);
       formParent.reset();
-  // }
 }
 
 function instantiateIdea(title, body, star) {
@@ -81,12 +77,13 @@ function findIndexOfIdea(event) {
 
 function styleStarIcon(event) {
   var hiddenObj = findIndexOfIdea(event);
-    hiddenObj.toggleStar();
+    hiddenObj.updateIdea();
     if (hiddenObj.star) {
       event.target.src = "./images/star-active.svg";
     } else {
       event.target.src = "./images/star.svg";
-      }
+    }
+      hiddenObj.saveToStorage(ideaArray);
 }
 
 function checkStar(newIdea) {
