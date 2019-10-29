@@ -81,12 +81,13 @@ function findIndexOfIdea(event) {
 
 function styleStarIcon(event) {
   var hiddenObj = findIndexOfIdea(event);
-    hiddenObj.toggleStar();
+    hiddenObj.updateIdea();
     if (hiddenObj.star) {
       event.target.src = "./images/star-active.svg";
     } else {
       event.target.src = "./images/star.svg";
-      }
+    }
+      hiddenObj.saveToStorage(ideaArray);
 }
 
 function checkStar(newIdea) {

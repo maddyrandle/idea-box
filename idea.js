@@ -3,22 +3,18 @@ class Idea {
     this.id = id || Date.now();
     this.title = title;
     this.body = body;
-    this.star = false;
+    this.star = starg;
   }
 
   saveToStorage(array) {
     localStorage.setItem("ideaCard", JSON.stringify(array))
   }
 
-  deleteFromStorage() {
-
+  deleteFromStorage(key) {
+    localStorage.removeItem(key);
   }
 
   updateIdea() {
-
-  }
-
-  toggleStar() {
     this.star = !this.star;
   }
 }
