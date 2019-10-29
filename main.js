@@ -20,11 +20,18 @@ function onFormParentClick() {
   }
 }
 
-// function parseLocalStorage() {
-//   var getItem = localStorage.getItem("ideaCard");
-//   var storageArray = JSON.parse(getItem);
-//   return storageArray;
-// }
+function parseLocalStorage() {
+  var getItem = localStorage.getItem("ideaCard");
+  var storageArray = JSON.parse(getItem);
+  return storageArray;
+}
+
+function checkLocalStorage() {
+  var storageArray = parseLocalStorage();
+    for (var i = 0; i < storageArray.length; i++) {
+      instantiateIdea(storageArray[i].title, storageArray[i].body, storageArray[i].star, id);
+    }
+}
 
 function createCard(newIdea) {
   // how does it refrence new idea
