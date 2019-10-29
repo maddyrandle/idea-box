@@ -6,6 +6,7 @@ var ideaArray = [];
 
 formParent.addEventListener("click", onFormParentClick);
 cardContainerParent.addEventListener("click", onCardParentClick);
+window.addEventListener("load", pageLoad);
 
 function onCardParentClick() {
   deleteCard(event)
@@ -20,6 +21,12 @@ function onFormParentClick() {
   }
 }
 
+function pageLoad() {
+  if ("ideaCard" in localStorage) {
+     checkLocalStorage()
+  }
+}
+
 function parseLocalStorage() {
   var getItem = localStorage.getItem("ideaCard");
   var storageArray = JSON.parse(getItem);
@@ -29,14 +36,14 @@ function parseLocalStorage() {
 function checkLocalStorage() {
   var storageArray = parseLocalStorage();
     for (var i = 0; i < storageArray.length; i++) {
-      instantiateIdea(storageArray[i].title, storageArray[i].body, storageArray[i].star, id);
+      instantiateIdea(storageArray[i].title, storageArray[i].body, storageArray[i].star);
     }
 }
 
 function createCard(newIdea) {
   // how does it refrence new idea
   // medusa
-  if (event.target.className === "save-btn" && titleInput.value && ideaInput.value) {
+  // if (event.target.className === "save-btn" && titleInput.value && ideaInput.value) {
     var cardHtml = `
     <div id="${newIdea.id}" class="card-container">
       <header class="card-header">
@@ -53,7 +60,7 @@ function createCard(newIdea) {
      `;
       cardContainerParent.insertAdjacentHTML("afterbegin", cardHtml);
       formParent.reset();
-  }
+  // }
 }
 
 function instantiateIdea(title, body, star) {
