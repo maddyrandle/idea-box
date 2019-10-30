@@ -10,10 +10,6 @@ class Idea {
     localStorage.setItem("ideaCard", JSON.stringify(array))
   }
 
-  deleteFromStorage(key) {
-    localStorage.removeItem(key);
-  }
-
   updateIdea() {
     this.star = !this.star;
   }
