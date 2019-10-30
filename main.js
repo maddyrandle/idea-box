@@ -28,8 +28,10 @@ function onFormParentClick() {
 function checkUserInput() {
   if (titleInput.value && ideaInput.value != "") {
     saveBtn.disabled = false;
+    saveBtn.classList.remove("disable-save-btn");
   } else {
     saveBtn.disabled = true;
+    saveBtn.classList.add("disable-save-btn");
   }
 }
 
