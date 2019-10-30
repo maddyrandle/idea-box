@@ -2,10 +2,14 @@ var formParent = document.querySelector(".idea-form");
 var cardContainerParent = document.querySelector(".empty-section-container");
 var titleInput = document.querySelector(".title-input");
 var ideaInput = document.querySelector(".body-textarea");
+var saveBtn = document.querySelector(".save-btn");
 var ideaArray = [];
 
 formParent.addEventListener("click", onFormParentClick);
 cardContainerParent.addEventListener("click", onCardParentClick);
+titleInput.addEventListener("keyup", checkUserInput);
+ideaInput.addEventListener('keyup', checkUserInput);
+saveBtn.addEventListener("click", checkUserInput);
 window.addEventListener("load", pageLoad);
 
 function onCardParentClick() {
@@ -18,6 +22,14 @@ function onCardParentClick() {
 function onFormParentClick() {
   if (event.target.className === "save-btn") {
   instantiateIdea(titleInput.value, ideaInput.value, false);
+  }
+}
+
+function checkUserInput() {
+  if (titleInput.value && ideaInput.value != "") {
+    saveBtn.disabled = false;
+  } else {
+    saveBtn.disabled = true;
   }
 }
 
@@ -41,22 +53,23 @@ function checkLocalStorage() {
 }
 
 function createCard(newIdea) {
-    var cardHtml = `
+  var cardHtml = `
     <div id="${newIdea.id}" class="card-container">
-      <header class="card-header">
-        <img class="star-icon" src="${checkStar(newIdea)}" alt="star favorite button">
-        <img class="delete-card-btn" src="./images/delete.svg" alt="delete button">
-      </header>
-      <h2 class="idea-title-heading">${newIdea.title}</h2>
-        <p class="card-idea-paragraph">${newIdea.body}</p>
-      <footer class="card-footer">
-        <img src="./images/comment.svg" alt=“comment button”>
-         <p class="card-comment">Comment</p>
-      </footer>
-     </div>
+    <header class="card-header">
+      <img class="star-icon" src="${checkStar(newIdea)}" alt="star favorite button">
+      <img class="delete-card-btn" src="./images/delete.svg" alt="delete button">
+    </header>
+    <h2 class="idea-title-heading">${newIdea.title}</h2>
+    <p class="card-idea-paragraph">${newIdea.body}</p>
+    <footer class="card-footer">
+      <img src="./images/comment.svg" alt=“comment button”>
+      <p class="card-comment">Comment</p>
+    </footer>
+    </div>
      `;
       cardContainerParent.insertAdjacentHTML("afterbegin", cardHtml);
-      formParent.reset();
+        formParent.reset();
+        checkUserInput();
 }
 
 function instantiateIdea(title, body, star) {
