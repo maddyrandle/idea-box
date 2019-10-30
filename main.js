@@ -66,6 +66,16 @@ function instantiateIdea(title, body, star) {
   idea.saveToStorage(ideaArray);
 }
 
+function deleteCard(event) {
+  if (event.target.className === "delete-card-btn") {
+    var hiddenObj = findIndexOfIdea(event);
+    var i = ideaArray.indexOf(hiddenObj)
+    ideaArray.splice(i, 1);
+    hiddenObj.saveToStorage(ideaArray);
+    event.target.closest(".card-container").remove();
+  }
+}
+
 function findIndexOfIdea(event) {
   var ideaId = parseInt(event.target.closest(".card-container").id);
     for (var i = 0; i < ideaArray.length; i++) {
@@ -77,13 +87,13 @@ function findIndexOfIdea(event) {
 
 function styleStarIcon(event) {
   var hiddenObj = findIndexOfIdea(event);
-    hiddenObj.updateIdea();
-    if (hiddenObj.star) {
-      event.target.src = "./images/star-active.svg";
-    } else {
-      event.target.src = "./images/star.svg";
-    }
-      hiddenObj.saveToStorage(ideaArray);
+  hiddenObj.updateIdea();
+  if (hiddenObj.star) {
+    event.target.src = "./images/star-active.svg";
+  } else {
+    event.target.src = "./images/star.svg";
+  }
+    hiddenObj.saveToStorage(ideaArray);
 }
 
 function checkStar(newIdea) {
@@ -92,9 +102,4 @@ function checkStar(newIdea) {
   } else {
     return "./images/star.svg";
   }
-}
-
-function deleteCard(event) {
-  if (event.target.className === "delete-card-btn")
-    event.target.closest(".card-container").remove();
 }
